@@ -18,7 +18,7 @@ async function start(client) {
         await client.sendText(message.from, messageResponse);
       }
     } catch (error) {
-      client.close();
+      client.error("Error caught:", error.message);
     }
   });
 
